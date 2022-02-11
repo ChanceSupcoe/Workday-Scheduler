@@ -1,11 +1,14 @@
 hourDisplay();
 
+//Pull Date from moment.js and Place Date in Header
 var momentDate = moment().format('LL');
 $("#currentDay").append(momentDate);
 
-
+//Past Present and Future Display and Save Button Functionality
 function hourDisplay() {
+    //Pull Hour from moment.js
     var momentHour = moment().hour();
+    //Variables for Text Areas
     var nine = $("#nineText");
     var ten = $("#tenText");
     var eleven = $("#elevenText");
@@ -16,6 +19,63 @@ function hourDisplay() {
     var sixteen = $("#sixteenText");
     var seventeen = $("#seventeenText");
 
+    //Save Button Click Functions
+    $("#saveBtn9").on("click", function () {
+        var hour9 = ("0900");
+        var nineTextArea = nine.val();
+        localStorage.setItem(hour9, nineTextArea);
+        console.log(hour9, nineTextArea);
+    });
+    $("#saveBtn10").on("click", function () {
+        var hour10 = ("1000");
+        var tenTextArea = ten.val();
+        localStorage.setItem(hour10, tenTextArea);
+        console.log(hour10, tenTextArea);
+    });
+    $("#saveBtn11").on("click", function () {
+        var hour11 = ("1100");
+        var elevenTextArea = eleven.val();
+        localStorage.setItem(hour11, elevenTextArea);
+        console.log(hour11, elevenTextArea);
+    });
+    $("#saveBtn12").on("click", function () {
+        var hour12 = ("1200");
+        var twelveTextArea = twelve.val();
+        localStorage.setItem(hour12, twelveTextArea);
+        console.log(hour12, twelveTextArea);
+    });
+    $("#saveBtn13").on("click", function () {
+        var hour13 = ("1300");
+        var thirteenTextArea = thirteen.val();
+        localStorage.setItem(hour13, thirteenTextArea);
+        console.log(hour13, thirteenTextArea);
+    });
+    $("#saveBtn14").on("click", function () {
+        var hour14 = ("1400");
+        var fourteenTextArea = fourteen.val();
+        localStorage.setItem(hour14, fourteenTextArea);
+        console.log(hour14, fourteenTextArea);
+    });
+    $("#saveBtn15").on("click", function () {
+        var hour15 = ("1500");
+        var fifteenTextArea = fifteen.val();
+        localStorage.setItem(hour15, fifteenTextArea);
+        console.log(hour15, fifteenTextArea);
+    });
+    $("#saveBtn16").on("click", function () {
+        var hour16 = ("1600");
+        var sixteenTextArea = sixteen.val();
+        localStorage.setItem(hour16, sixteenTextArea);
+        console.log(hour16, sixteenTextArea);
+    });
+    $("#saveBtn17").on("click", function () {
+        var hour17 = ("1700");
+        var seventeenTextArea = seventeen.val();
+        localStorage.setItem(hour17, seventeenTextArea);
+        console.log(hour17, seventeenTextArea);
+    });
+
+    //Add Classes Depending on Hour
     if (momentHour === 9) {
         nine.removeClass("past");
         nine.removeClass("future");
@@ -133,4 +193,8 @@ function hourDisplay() {
         seventeen.removeClass("present");
         seventeen.addClass("past");
     }
+
+
 }
+
+
