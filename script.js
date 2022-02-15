@@ -1,4 +1,27 @@
+var nine = $("#nineText");
+var ten = $("#tenText");
+var eleven = $("#elevenText");
+var twelve = $("#twelveText");
+var thirteen = $("#thirteenText");
+var fourteen = $("#fourteenText");
+var fifteen = $("#fifteenText");
+var sixteen = $("#sixteenText");
+var seventeen = $("#seventeenText");
+
+
 hourDisplay();
+
+
+nine.val(localStorage.getItem("0900"));
+ten.val(localStorage.getItem("1000"));
+eleven.val(localStorage.getItem("1100"));
+twelve.val(localStorage.getItem("1200"));
+thirteen.val(localStorage.getItem("1300"));
+fourteen.val(localStorage.getItem("1400"));
+fifteen.val(localStorage.getItem("1500"));
+sixteen.val(localStorage.getItem("1600"));
+seventeen.val(localStorage.getItem("1700"));
+
 
 //Pull Date from moment.js and Place Date in Header
 var momentDate = moment().format('LL');
@@ -8,7 +31,6 @@ $("#currentDay").append(momentDate);
 function hourDisplay() {
     //Pull Hour from moment.js
     var momentHour = moment().hour();
-    //Variables for Text Areas
     var nine = $("#nineText");
     var ten = $("#tenText");
     var eleven = $("#elevenText");
