@@ -2,6 +2,8 @@
 
 ## Deployed URL
 
+https://chancesupcoe.github.io/Workday-Scheduler/
+
 ## Workday-Scheduler
 A simple calendar application allowing for the saving of events spread across the typical business day (0900 - 1700).
 
